@@ -7,7 +7,10 @@ const modalDescription = document.querySelector('.modal p')
 const modalButton = document.querySelector('.modal button')
 
 //Pegar todos os botões que existe com a classe check
-const checkButtons = document.querySelectorAll(".actions a.check") 
+const checkButtons = document.querySelectorAll(".actions a.check")
+
+// Botão de copiar código da sala
+const roomButton = document.querySelector("#room-id")
 
 // Adicionar um Listener com evento de abrir a modal
 checkButtons.forEach(button => {
@@ -43,7 +46,6 @@ function handleClick(event, check = true){
     modalDescription.innerHTML = `Tem certeza que deseja ${text.toLocaleLowerCase()}  esta pergunta?`
     modalButton.innerHTML = `Sim, ${text.toLocaleLowerCase()}`
     check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
-
-    //Abrir modal
+    //Abrir modal    
     modal.open()
 }
