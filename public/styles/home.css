@@ -6,6 +6,7 @@
     grid-template-areas:
     'header header'
     'left right';
+    
 }
 
 header{
@@ -147,4 +148,17 @@ input, button, .button {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  /* Dark Mode */
+  .dark-mode {
+    display: flex;
+    align-items: center;
+    z-index: 1
+  }
+
+  .dark-mode label{
+    margin-right: 0.75rem;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
   }
