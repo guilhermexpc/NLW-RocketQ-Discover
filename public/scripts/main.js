@@ -8,6 +8,13 @@ const modalButton = document.querySelector('.modal button')
 
 //Pegar todos os botões que existe com a classe check
 const checkButtons = document.querySelectorAll(".actions a.check")
+const deleteButton = document.querySelectorAll(".actions a.delete")
+
+const spamroomid = document.querySelector(".span-room-id")
+
+
+
+spamroomid.addEventListener("click", (event) => copyText(event, spamroomid.textContent))
 
 // Botão de copiar código da sala
 const roomButton = document.querySelector("#room-id")
@@ -19,7 +26,7 @@ checkButtons.forEach(button => {
 
 })
 
-const deleteButton = document.querySelectorAll(".actions a.delete")
+
 
 // Adicionar um Listener com evento de abrir a modal
 deleteButton.forEach(button => {
@@ -48,4 +55,11 @@ function handleClick(event, check = true){
     check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
     //Abrir modal    
     modal.open()
+}
+
+function copyText(event, textValue){
+    event.preventDefault()
+    const spamroomidText = textValue.replace('#','')
+    navigator.clipboard.writeText(spamroomidText)
+    alert("Número da sala copiado");
 }
