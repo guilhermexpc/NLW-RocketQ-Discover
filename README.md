@@ -11,6 +11,7 @@ Milha Extra:
 - Dark Mode Habilitado
 {
   Botão no header de todas as páginas para habilitar/desabilitar o tema escuro.
-  progresso: 70%; Falta implementar um modo para o tema escuro ficar gravado na transição de todas as telas
+  progresso: 100%; 
+  (Falta implementar um modo para o tema escuro ficar gravado na transição de todas as telas) = Feito
 }
 
