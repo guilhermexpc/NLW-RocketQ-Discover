@@ -10,11 +10,11 @@ const modalButton = document.querySelector('.modal button')
 const checkButtons = document.querySelectorAll(".actions a.check")
 const deleteButton = document.querySelectorAll(".actions a.delete")
 
-const spamroomid = document.querySelector(".span-room-id")
+const buttonRoomId = document.querySelector("#room-id")
 
 
 
-spamroomid.addEventListener("click", (event) => copyText(event, spamroomid.textContent))
+buttonRoomId.addEventListener("click", (event) => copyText(event, buttonRoomId.firstElementChild.textContent))
 
 // Botão de copiar código da sala
 const roomButton = document.querySelector("#room-id")
